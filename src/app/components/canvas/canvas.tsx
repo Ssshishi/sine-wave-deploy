@@ -1,12 +1,12 @@
 import { useRef, FC, useEffect, useState } from 'react';
 
 import { CanvasContext } from 'app/hooks/useCanvas';
-import useResponsiveSize from 'app/hooks/useResponsiveSize';
+import useAutoSize from 'app/hooks/useAutoSize';
 import Wave from '../wave';
 
 const Canvas: FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const { width, height } = useResponsiveSize();
+    const { width, height } = useAutoSize();
 
     const [context, setContext] =
         useState<CanvasRenderingContext2D | undefined>();
